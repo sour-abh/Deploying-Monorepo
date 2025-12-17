@@ -1,9 +1,15 @@
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "./generated/prisma/client";
 import { Pool } from "pg";
-const pool=new Pool({
-    connectionString:process.env.DATABASE_URL
-})
+const pool=new Pool(
+    {
+  host: "localhost",
+  port: 5432,
+  user: "postgres",
+  password: "mysecretpassword",
+  database: "postgres",
+}
+)
 
 const adapter=new PrismaPg(pool)
 
