@@ -1,5 +1,5 @@
 import  express, { type Request, type Response } from "express";
-import {prisma} from '@repo/db/client'
+import {prisma} from 'db/client'
 const app = express()
 interface todo{
 task:string,

@@ -1,4 +1,4 @@
-import {prisma} from "@repo/db/client"
+import {prisma} from "db/client"
 
 export default async function Home(){
   const users= await  prisma.user.findMany()
@@ -9,3 +9,4 @@ export default async function Home(){
     </div>
   )
 }
+export const dynamic='force-dynamic'
