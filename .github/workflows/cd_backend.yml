@@ -5,8 +5,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DATABASE_URL: ${{secrets.DATABASE_URL}} 
     steps:
       - name: checkout the code
         uses: actions/checkout@v2
@@ -24,4 +22,6 @@ jobs:
           environment: 
           push: true
           tags: sourabh/deploying-backend:${{github.sha}}
+          build-args: |
+            DATABASE_URL=${{secrets.DATABASE_URL}}
 
