@@ -19,6 +19,7 @@ jobs:
         with:
           context: . 
           file: ./docker/Dockerfile.backend
+          environment: 
           push: true
-          tags: sourav/deploying-backend:${{github.sha}}
+          tags: sourabh/deploying-backend:${{github.sha}}
 
