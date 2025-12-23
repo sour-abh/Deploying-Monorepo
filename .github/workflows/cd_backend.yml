@@ -21,7 +21,7 @@ jobs:
           file: ./docker/Dockerfile.backend
           environment: 
           push: true
-          tags: sourabh/deploying-backend:${{github.sha}}
+          tags: drago9t/deploying-backend:${{github.sha}}
           build-args: |
             DATABASE_URL=${{secrets.DATABASE_URL}}
 
